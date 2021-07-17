@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=Courier+Prime&display=swap');
+
+:root {
+  /* Var Body */
+  --body-color: #333333;
+  --body-bg-color: #384047;
+  --body-font-family: 'Courier Prime', sans-serif;
+  
+  /* Var text color */
+  --page-text-color: #FFFAF0;
+}
+
+body {
+	background-color: var(--body-bg-color);
+	color: var(--body-color);
+	font-family: var(--body-font-family);
+}
+
+h1 {
+	color: var(--page-text-color);
+}
+
+h2 {
+  color: var(--page-text-color);
+}
+
+h3 {
+  color: var(--page-text-color);
+}
+
+h4 {
+  color: var(--page-text-color);
+}
+
+h5 {
+  color: var(--page-text-color);
+}
+
+h6 {
+  color: var(--page-text-color);
+}

@@ -1,5 +1,8 @@
 //https://codepen.io/NiallJoeMaher/pen/MaWGOa
 
+
+$(document).ready(function() {
+
 var color = $(".selected").css("background-color");
 var $canvas = $("canvas");
 var context = $canvas[0].getContext("2d");
@@ -65,4 +68,6 @@ $canvas.mousedown(function(e){
 
 }).mouseleave(function(){
   $canvas.mouseup();
+});
+
 });

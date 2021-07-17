@@ -2,15 +2,65 @@
 <html>
     <head>
         <title>Take Off</title>
-        <link rel="stylesheet" href="styles.css">
+        <!-- Style Sheets -->
+        <link rel="stylesheet" href="./css/main.css">
+        <link rel="stylesheet" href="./css/canvascontrols.css">
+        <!-- Jquery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="clicktodraw.js"></script>
+        <!-- Click to Draw -->
+        <script src="./scripts/colorselector.js"></script>
+        <script src="./scripts/clicktodrawFH.js"></script>
+        <script src="./scripts/clicktodrawSL.js"></script>
     </head>
 
 <body>
     <div>
-    <canvas id="canvas" width="500" height="500"></canvas>
-    </div>
+        <h2>Takeoff</h2>
+        <ul>
+            <li>
+                <p><b>Freehand: </b>Click and hold to draw</p>
+            </li>
+            <li> 
+                <p><b>Straight Line: </b>Click one point then click another</p>
+            </li>
+        </ul>
+      </div>
+
+      <canvas 
+            id="canvas"
+            width="600"
+            height="400">
+      </canvas>
+
+
+      <div class="controls">
+        <ul>
+          <li class="controls red selected"></li>
+          <li class="controls blue"></li>
+          <li class="controls yellow"></li>
+        </ul>
+        <button id="controls revealColorSelect">New Color</button>
+        <div id="controls colorSelect">
+          <span id="newColor"></span>
+          <div class="controls sliders">
+            <p>
+              <label for="red">Red</label>
+              <input id="red" name="red" type="range" min=0 max=255 value=0>
+            </p>
+            <p>
+              <label for="green">Green</label>
+              <input id="green" name="green" type="range" min=0 max=255 value=0>
+            </p>
+            <p>
+              <label for="blue">Blue</label>
+              <input id="blue" name="blue" type="range" min=0 max=255 value=0>
+            </p>
+          </div>
+          <div>
+            <button id="addNewColor">Add Color</button>
+          </div>
+        </div>
+      </div>
 </body>
 
 </html>
