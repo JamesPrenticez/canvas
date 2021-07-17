@@ -8,9 +8,10 @@
         <!-- Jquery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <!-- Click to Draw -->
-        <script src="./scripts/colorselector.js"></script>
-        <script src="./scripts/clicktodrawFH.js"></script>
-        <script src="./scripts/clicktodrawSL.js"></script>
+        <script src="./scripts/colorselector.js" defer></script>
+        <script src="./scripts/clicktodrawFH.js" defer></script>
+        <script src="./scripts/clicktodrawSL.js" defer></script>
+        <script src="./scripts/tabletocsv.js" defer></script>
     </head>
 
 <body>
@@ -61,6 +62,47 @@
           </div>
         </div>
       </div>
+
+      <table id="table1" class="table table-bordered sortTable">
+        <thead>
+        <tr>
+        <th>#</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Username</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <td>0</td>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+        </tr>
+        <tr>
+        <td>1</td>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@TwBootstrap</td>
+        </tr>
+        <tr>
+        <td>2</td>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+        </tr>
+        <tr>
+        <td>3</td>
+        <td>Larry the Bird</td>
+        <td>Dev-Skills</td>
+        <td>@twitter</td>
+        </tr>
+        </tbody>
+        </table>
+
+      <a href="#" onclick="download_table_as_csv('table1');">Download as CSV</a>
+
+
 </body>
 
 </html>

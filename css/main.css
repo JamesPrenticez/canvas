@@ -12,7 +12,7 @@
 
 body {
 	background-color: var(--body-bg-color);
-	color: var(--body-color);
+	color: var(--page-text-color);
 	font-family: var(--body-font-family);
 }
 
@@ -37,5 +37,9 @@ h5 {
 }
 
 h6 {
+  color: var(--page-text-color);
+}
+
+p {
   color: var(--page-text-color);
 }
