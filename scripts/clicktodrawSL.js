@@ -25,6 +25,7 @@ $(document).ready(function() {
         x = getCursorPosition(e)[0] - this.offsetLeft;
         y = getCursorPosition(e)[1] - this.offsetTop;
         
+        
         if (clicks != 1) {
             clicks++;
         } else {

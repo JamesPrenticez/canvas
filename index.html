@@ -8,10 +8,13 @@
         <!-- Jquery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <!-- Click to Draw -->
-        <script src="./scripts/colorselector.js" defer></script>
+        <!-- <script src="./scripts/undo.js" defer></script> -->
+        <!-- <script src="./scripts/colorselector.js" defer></script>
         <script src="./scripts/clicktodrawFH.js" defer></script>
         <script src="./scripts/clicktodrawSL.js" defer></script>
-        <script src="./scripts/tabletocsv.js" defer></script>
+        <script src="./scripts/tabletocsv.js" defer></script> -->
+        <script src="./scripts/canvas.js" defer></script>
+        <script src="./scripts/merge.js" defer></script>
     </head>
 
 <body>
@@ -27,14 +30,20 @@
         </ul>
       </div>
 
-      <canvas 
+      <!-- A3/4 1240.25 x 877 -->
+      <!-- A3/2 2480.5 x 1754 -->
+      <!-- A3 4961 x 3508 -->
+      <canvas
             id="canvas"
-            width="600"
-            height="400">
+            width="1240.25"
+            height="877">
       </canvas>
 
+      <!-- <div>
+        <img id="source" src="./plans/james.png" width="600" height="400">
+      </div> -->
 
-      <div class="controls">
+      <!-- <div class="controls">
         <ul>
           <li class="controls red selected"></li>
           <li class="controls blue"></li>
@@ -61,7 +70,7 @@
             <button id="addNewColor">Add Color</button>
           </div>
         </div>
-      </div>
+      </div> -->
 
       <table id="table1" class="table table-bordered sortTable">
         <thead>
