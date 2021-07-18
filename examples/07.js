@@ -1,5 +1,4 @@
-const dimGroups = document.getElementById('dimensionGroups');
-const canvasEle = document.getElementById('canvasMarkup');
+const canvasEle = document.getElementById('drawContainer');
 const context = canvasEle.getContext('2d');
 let startPosition = {x: 0, y: 0};
 let lineCoordinates = {x: 0, y: 0};
@@ -26,15 +25,14 @@ const drawLine = () => {
 const mouseDownListener = (event) => {
    startPosition = getClientOffset(event);
    isDrawStart = true;
-   console.log(startPosition)
 }
 
 const mouseMoveListener = (event) => {
   if(!isDrawStart) return;
+  
   lineCoordinates = getClientOffset(event);
   clearCanvas();
   drawLine();
-  console.log(lineCoordinates)
 }
 
 const mouseupListener = (event) => {

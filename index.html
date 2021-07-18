@@ -5,6 +5,7 @@
         <!-- Style Sheets -->
         <link rel="stylesheet" href="./css/main.css">
         <link rel="stylesheet" href="./css/canvascontrols.css">
+        <link rel="stylesheet" href="./css/dimesionGroups.css">
         <!-- Jquery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <!-- Click to Draw -->
@@ -20,7 +21,7 @@
 <body>
     <div>
         <h2>Takeoff</h2>
-        <ul>
+        <!-- <ul>
             <li>
                 <p><b>Freehand: </b>Click and hold to draw</p>
             </li>
@@ -28,16 +29,29 @@
                 <p><b>Straight Line: </b>Click one point then click another</p>
             </li>
         </ul>
-      </div>
+      </div> -->
 
       <!-- A3/4 1240.25 x 877 -->
       <!-- A3/2 2480.5 x 1754 -->
       <!-- A3 4961 x 3508 -->
       <canvas
-            id="canvas"
+            id="canvasPlans"
             width="1240.25"
             height="877">
       </canvas>
+
+      <canvas
+            id="canvasMarkup"
+            width="1240.25"
+            height="877">
+      </canvas>
+
+      <table id="dimensionGroups">
+          <th>Dimension Groups</th>
+          <tr><td>1</td><td>2</td></tr>
+
+      </table>
+
 
       <!-- <div>
         <img id="source" src="./plans/james.png" width="600" height="400">
@@ -72,7 +86,7 @@
         </div>
       </div> -->
 
-      <table id="table1" class="table table-bordered sortTable">
+      <!-- <table id="table1" class="table table-bordered sortTable">
         <thead>
         <tr>
         <th>#</th>
@@ -109,7 +123,7 @@
         </tbody>
         </table>
 
-      <a href="#" onclick="download_table_as_csv('table1');">Download as CSV</a>
+      <a href="#" onclick="download_table_as_csv('table1');">Download as CSV</a> -->
 
 
 </body>

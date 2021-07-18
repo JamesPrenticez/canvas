@@ -1,6 +1,15 @@
-canvas {
-  background: bisque;
-  display: inline-block;
+#canvasMarkup {
+  /* background: bisque; */
+  position: absolute;
+  margin: 50px auto 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 0 0 #222;
+  cursor: url(../img/cursor.png), crosshair;
+}
+
+#canvasPlans {
+  background: green;
+  position: absolute;
   margin: 50px auto 10px;
   border-radius: 5px;
   box-shadow: 0 4px 0 0 #222;
