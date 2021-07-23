@@ -32,9 +32,24 @@ const mouseDownListener = (event) => {
 const mouseMoveListener = (event) => {
   if(!isDrawStart) return;
   lineCoordinates = getClientOffset(event);
+  
   clearCanvas();
+  //Can you mock this?
   drawLine();
+  //wait untill the end
   console.log(lineCoordinates)
+  //only want to log the last number
+  logToScreen()
+}
+
+const logToScreen = () => {
+   let table = document.getElementById("dimensionGroups")
+   let row = table.insertRow(2)
+   let cellX = row.insertCell(0)
+   let cellY = row.insertCell(1)
+   cellX.innerHTML = lineCoordinates.x
+   cellY.innerHTML = lineCoordinates.y
+   console.log(cellX)
 }
 
 const mouseupListener = (event) => {
