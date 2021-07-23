@@ -1,18 +1,15 @@
-#canvasMarkup {
-  /* background: bisque; */
-  position: absolute;
-  margin: 50px auto 10px;
-  border-radius: 5px;
-  box-shadow: 0 4px 0 0 #222;
-  cursor: url(../img/cursor.png), crosshair;
+canvas { 
+  display: block;
+  margin:1em auto;
+  background:#fff;
+  border:1px solid #ccc;
 }
 
-#canvasPlans {
-  background: green;
-  position: absolute;
-  margin: 50px auto 10px;
-  border-radius: 5px;
-  box-shadow: 0 4px 0 0 #222;
+#canvasMarkup {
+  display: block;
+  margin: 1em auto;
+  background:#fff;
+  border:1px solid #ccc;
   cursor: url(../img/cursor.png), crosshair;
 }
 
