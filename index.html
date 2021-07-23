@@ -2,10 +2,16 @@
 <html>
     <head>
         <title>Take Off</title>
+        <!-- Meta Tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
         <!-- Style Sheets -->
         <link rel="stylesheet" href="./css/main.css">
-        <link rel="stylesheet" href="./css/canvascontrols.css">
+        <link rel="stylesheet" href="./css/canvas.css">
         <link rel="stylesheet" href="./css/dimesionGroups.css">
+        <link rel="stylesheet" href="./css/buttons.css">
+        <link rel="stylesheet" href="./css/grid.css">
+        <link rel="stylesheet" href="./css/table.css">
         <!-- Jquery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <!-- Click to Draw -->
@@ -14,115 +20,53 @@
         <script src="./scripts/clicktodrawFH.js" defer></script>
         <script src="./scripts/tabletocsv.js" defer></script> -->
         <!-- <script src="./scripts/canvas.js" defer></script> -->
-        <script src="./scripts/panAndZoom.js" defer></script>
-        <script src="./scripts/clicktodrawSL.js" defer></script>
-    </head>
+        <!-- <script src="./scripts/panAndZoom.js" defer></script>
+        <script src="./scripts/clicktodrawSL.js" defer></script> -->
+          <script src="./scripts/canvas.js" defer></script> 
+          <script src="./scripts/blank.js" defer></script> 
+        </head>
 
 <body>
-    <div>
-        <h2>Takeoff</h2>
-        <!-- <ul>
-            <li>
-                <p><b>Freehand: </b>Click and hold to draw</p>
-            </li>
-            <li> 
-                <p><b>Straight Line: </b>Click one point then click another</p>
-            </li>
-        </ul>
-      </div> -->
+    <!-- A3/4 1240.25 x 877 -->
+    <!-- A3/2 2480.5 x 1754 -->
+    <!-- A3 4961 x 3508 -->
+    <main>
+      <h2>Takeoff</h2>
 
-      <!-- A3/4 1240.25 x 877 -->
-      <!-- A3/2 2480.5 x 1754 -->
-      <!-- A3 4961 x 3508 -->
+      <div id="grid">
 
-      <canvas id="canvas"></canvas>
-
-      <!-- <canvas
-            id="canvas"
-            width= 750px
-            height= 500px>
-      </canvas> -->
-
-<!-- 
-      <table id="dimensionGroups">
-          <th>Dimension Groups</th>
-          <tr><td id = "x">x</td><td id = "y">y</td></tr>
-      </table> -->
-
-
-      <!-- <div>
-        <img id="source" src="./plans/james.png" width="600" height="400">
-      </div> -->
-
-      <!-- <div class="controls">
-        <ul>
-          <li class="controls red selected"></li>
-          <li class="controls blue"></li>
-          <li class="controls yellow"></li>
-        </ul>
-        <button id="controls revealColorSelect">New Color</button>
-        <div id="controls colorSelect">
-          <span id="newColor"></span>
-          <div class="controls sliders">
-            <p>
-              <label for="red">Red</label>
-              <input id="red" name="red" type="range" min=0 max=255 value=0>
-            </p>
-            <p>
-              <label for="green">Green</label>
-              <input id="green" name="green" type="range" min=0 max=255 value=0>
-            </p>
-            <p>
-              <label for="blue">Blue</label>
-              <input id="blue" name="blue" type="range" min=0 max=255 value=0>
-            </p>
-          </div>
-          <div>
-            <button id="addNewColor">Add Color</button>
-          </div>
+        <!-- Top Bar -->
+        <div id="top">
+          <div id="green" style="background-image: url(./buttons/green.png)"></div>
+          <div id="red" style="background-image: url(./buttons/red.png)" onclick=""></div>
         </div>
-      </div> -->
+        
+        <!-- Right Pannel -->
+        <div id="right">
+          <table id="table">
+            <th>Dimension Groups</th>
+            <tr><td id = "x">x</td><td id = "y">y</td></tr>
+          </table>
+        </div>
+        
+        <!-- Center Stage -->
+        <div id="centre">
+          <canvas id="canvas"></canvas>
+        </div>
 
-      <!-- <table id="table1" class="table table-bordered sortTable">
-        <thead>
-        <tr>
-        <th>#</th>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Username</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-        <td>0</td>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-        </tr>
-        <tr>
-        <td>1</td>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@TwBootstrap</td>
-        </tr>
-        <tr>
-        <td>2</td>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-        </tr>
-        <tr>
-        <td>3</td>
-        <td>Larry the Bird</td>
-        <td>Dev-Skills</td>
-        <td>@twitter</td>
-        </tr>
-        </tbody>
-        </table>
+        <!-- Bottom Pannel -->
+        <div id="bottom">
+          <p>bottom</p>
+        </div>
+        
+        <!-- Left Pannel -->
+        <div id="left">
+          <p>Left</p>
+          <p>Plans</p>
+        </div>
 
-      <a href="#" onclick="download_table_as_csv('table1');">Download as CSV</a> -->
-
-
+      </div>
+    </main>
 </body>
 
 </html>

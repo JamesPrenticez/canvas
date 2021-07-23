@@ -6,11 +6,10 @@ var gkhead = new Image;
 
 window.onload = function(){		
 
-        var ctx = canvas.getContext('2d');
-        trackTransforms(ctx);
+    var ctx = canvas.getContext('2d');
+    trackTransforms(ctx);
       
-function redraw(){
-
+    function redraw(){
       // Clear the entire canvas
       var p1 = ctx.transformedPoint(0,0);
       var p2 = ctx.transformedPoint(canvas.width,canvas.height);

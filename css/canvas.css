@@ -1,0 +1,8 @@
+#canvas {
+  height: 90%;
+  width: 90%;
+  display: block;
+  margin:1em auto;
+  background:green;
+  border:1px solid #ccc;
+}

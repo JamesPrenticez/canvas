@@ -1,0 +1,70 @@
+main{
+    height: 100%;
+    margin:1em;
+}
+  
+#grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
+    column-gap: 3px;
+    row-gap: 3px;
+    justify-content: space-evenly;
+}
+
+#top {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    display: inline-block;
+    background: whitesmoke;
+    height: 50px;
+}
+
+#bottom{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 3;
+    display: inline-flex;
+    background: whitesmoke;;
+    height: 60px;
+}
+
+#left{
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    background-color: whitesmoke;
+    width: 100%;
+    justify-self: center;
+    position: relative;
+}
+
+#right{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    background-color: whitesmoke;
+    width: 100%;
+    justify-self: center;
+    position: relative;
+}
+
+/* AKA Canvas */
+#centre{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    justify-self: center;
+    position: relative;
+}
+
+
