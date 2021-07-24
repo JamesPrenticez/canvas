@@ -54,18 +54,45 @@ function getCursorCoordinates (event) {
 }
 
 const mouseDownListener = (event) => {
-    startPosition = getCursorCoordinates(event);
-    logToScreen(startPosition)
+    if(isDrawing === false){
+        startPosition = getCursorCoordinates(event);
+        logToScreen(startPosition)
+        isDrawing = true;
+    } else {
+        endPosition = getCursorCoordinates(event);
+        logToScreen(endPosition)
+        isDrawing = false;
+    }
 }
 
-const logToScreen = (startPosition, endPosition) => {
+const logToScreen = (position) => {
+    //Get the Table
     let table = document.getElementById("table")
-    let row = table.insertRow(2)
-    let cellX = row.insertCell(0)
-    let cellY = row.insertCell(1)
-    cellX.innerHTML = startPosition.x
-    cellY.innerHTML = startPosition.y
- }
+
+    if(isDrawing === false){
+        //Create a new row
+        let row = table.insertRow(-1)
+        //Create 4 new cells inside that row
+        let startX = row.insertCell(0)
+        let startY = row.insertCell(1)
+        let endX = row.insertCell(2)
+        let endY = row.insertCell(3)
+        //Write coordinates to the cells
+        startX.innerHTML = position.x + "s"
+        startY.innerHTML = position.y +"s"
+        endX.innerHTML = ""
+        endY.innerHTML = ""
+    } else {
+        //Get the last row
+        let lastRow = table.rows[ table.rows.length - 1 ];
+        //Update the last 2 cells on that row    
+        let endX = lastRow.cells[2]
+        let endY = lastRow.cells[3]
+        //Write coordinates to the cells
+        endX.innerHTML = position.x
+        endY.innerHTML = position.y
+    }
+}
 
 //Event listeners
 canvas.addEventListener('mousedown', mouseDownListener);
