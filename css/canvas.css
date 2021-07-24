@@ -1,8 +1,7 @@
 #canvas {
-  height: 90%;
-  width: 90%;
+  height: 100%;
+  width: 100%;
   display: block;
-  margin:1em auto;
   background:green;
   border:1px solid #ccc;
 }
